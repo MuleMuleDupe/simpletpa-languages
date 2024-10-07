@@ -1,0 +1,174 @@
+#  ____    _                       _          _____
+# / ___|  (_)  _ __ ___    _ __   | |   ___  |_   _|  _ __     __ _
+# \___ \  | | | '_ ` _ \  | '_ \  | |  / _ \   | |   | '_ \   / _` |
+#  ___) | | | | | | | | | | |_) | | | |  __/   | |   | |_) | | (_| |
+# |____/  |_| |_| |_| |_| | .__/  |_|  \___|   |_|   | .__/   \__,_|
+#                         |_|                        |_|
+
+# PlaceHolders: %time% | %player% | %option%
+
+
+# !!!!!!!!!!!!!!!!
+# This options will support all plugins that use teleport stuff
+# If you want the plugin to log the previus teleport locations for the /back command from other plugins -> set this to true
+enable-teleport-logging: false
+# !!!!!!!!!!!!!!!!
+
+#If you set it to true, you will disable the prefix
+#Make sure to restart the server in order to apply it
+disable-prefix: false
+prefix: "&c[&6SimpleTpa&c]"
+
+#Messages:
+# To use HEX COLOR CODES - EXAMPLE: #2ecc71
+# Death-Message: "&6To teleport to your death #2ecc71location use &c/back"
+
+# TO DISABLE A MESSAGE - SET IT TO - NONE
+# EXAMPLE:
+# Console-Isnt-Player: "none"
+Console-Isnt-Player: "&6콘솔은 &cSimpleTpa&6를사용할수 없어요!"
+Disabled-World-Message: "&6여기서는 &cSimpleTpa&6를 사용할 수 없어요!"
+Teleport-Message: "&6당신은 &c%time%&6초 안에 순간이동 될 것이에요!"
+Teleport-Message-TPAUTO: "&6당신은 &c%time%&6초 후에 순간이동 할거에요! 움직이지 마세요!"
+Teleport-Message-Back-To-Player: "&6당신은 순간이동 요청을 &c수락&6했어요!"
+Player-Is-Null: "&6이 플레이어는 &c온라인&6이 아니예요!"
+Player-Doesnt-Have-Back-Point: "&6이 플레이어는 돌아갈 위치가 없어요!"
+Player-Doesnt-Have-Back-Point-1: "&6당신은 돌아갈 위치가 없어요!"
+Cooldown-Message: "&6당신은 %time%초 동안 그 명령어를 사용할 수 없어요!"
+Death-Message: "&6당신이 죽은 위치로 순간이동 하려면 &c/back&6을 사용하세요"
+Teleport-Message-Back-To-Sender-TPHEREALL: "&6여기로 순간이동하는 요청을 &c모두&6에게 보냈어요!"
+No-Permission-Message: "&6이 명령어를 사용할 권한이 없어요!"
+TpaToggle-Deactivated-Player-2: "&c%player%&6는 당신에게 오는 순간이동을 비활성화 했어요!"
+TpaToggle-Activated-Player-2: "&c%player% &6는 당신에게 오는 순간이동을 활성화 했어요!"
+TpaToggle-Deactivated-Player: "&6당신은 &c%player%&6에게서 오는 순간이동 요청을 &c비활성화&6했어요."
+TpaToggle-Activated-Player: "&6당신은 &c%player%&6에게서 오는 순간이동 요청을 &c활성화&6했어요."
+TpaToggle-Deactivated: "&6당신은 당신에게 오는 순간이동 요청을 &c비활성화&6했어요."
+TpaToggle-Activated: "&6당신은 당신에게 오는 순간이동 요청을 &c활성화&6활성화 했어요."
+TpaToggled-Player-Message: "&6그 플레이어는 자신에게 오는 순간이동 요청을 &c비활성화&6했어요!"
+Player-Is-Player: "&6당신은 &c스스로&6에게 순간이동 할 수 없어요!"
+Player-Is-Player-tpignore: "&6당신은 &c스스로&6를 순간이동 가능 목록에서 차단할 수 없어요!"
+Player-Is-Ignored: "&6그 플레이어는 &c순간이동 가능 목록에서 차단&6되었어요!"
+Player-Is-Already-Ignored: "&6그 플레이어는 &c순간이동 가능 목록에서 차단이 해제되었어요&6! 만약 그 플레이어를 순간이동 가능 목록에서 차단하고 싶다면, 명령어를 다시 쓰세요!"
+Already-A-TP-Request: "&6당신은 순간이동 요청을 이미 &c보냈어요! &6만약 순간이동 요청을 취소하고 싶다면 &c/tpcancel player&6를 쓰세요"
+Tpa-Usage-Message: "&c/tpa (player)&6를 쓰세요"
+TpaIgnore-Usage-Message: "&c/tpaignore (player)&6를 쓰세요"
+Timed-Out-Message: "&6당신의 &c순간이동 요청&6은 시간이 초과되었습니다!"
+Sending-Teleport-Request: "&c%player%&6에게 순간이동 요청을 보내고 있어요. 만약 순간이동 요청을 취소하고 싶다면 &c/tpcancel player&6을 쓰세요"
+Accept-Message: "&6순간이동 요청을 수락하려면, &c/tpaccept&6를 쓰세요"
+Deny-Message: "&6순간이동 요청을 거절하려면, type &c/tpdeny&6를 쓰세요"
+Sent-Request-On-You: "&c%player% &6가 당신에게 순간이동 요청을 보냈어요!"
+Timed-Out-Here-Message: "&6당신의 여기로 순간이동하는 요청은 &c시간이 초과&6되었습니다!"
+Sending-Teleport-Here-Request: "&6여기로 순간이동하라는 요청을 &c%player%&6에게 보내고 있어요. 만약 여기로 순간이동하라는 요청을 취소하고 싶다면 &c/tpcancel player&6를 쓰세요"
+Sent-Here-Request-On-You: "&c%player% &6가 자신의 위치로 순간이동 하라는 요청을 보냈어요!"
+Already-A-TPHere-Request: "&6당신은 여기로 순간이동 요청을 이미 &c보냈어요!&6 만약 여기로 순간이동 요청을 취소하고 싶다면 &c/tpcancel player&6를 쓰세요"
+Tpa-Here-Usage-Message: "&c/tpahere (player)&6를 쓰세요"
+No-Teleport-Requests: "&6당신은 아무 순간이동 요청도 없어요!"
+Invalid-Player: "&당신에게 순간이동하던 사람이 서버를 나간 것 같네요!"
+Teleport-Message-Back-To-Sender: "&c%player%&6가 당신의 순간이동 요청을 수락했어요."
+Teleported-Message: "&6순간이동했어요!"
+#for Teleported-Message-TpAuto  %player% placeholder for player name
+Teleported-Message-TpAuto: "&c%player%&6가 당신에게 순간이동했어요! 당신은 /tpauto 기능이 켜져 있어요!"
+Move-Cancel-Message: "&6당신은 움직였고 당신의 순간이동 요청은 삭제되었어요!"
+Rejected-Sender: "&6그 플레이어가 당신의 &c순간이동 요청&6을 거절했어요!"
+Rejected-Message: "&6당신은 그 플레이어의 &c순간이동&6 요청을 거절했어요!"
+Player-Is-In-Disabled-World: "&6당신이 순간이동 하고 싶었던 그 플레이어는 &cSimpleTpa가 비활성화된 세계&6에 있어요!"
+Tpcancel-Usage-Message: "&c/tpcancel (player)&6를 쓰세요"
+Error-Cancelling-Request: "&6당신은 자기 자신의 &c요청&6을 취소할 수 없어요!"
+Request-Cancelled: "&6당신은 성공적으로 &c순간이동 요청&6을 취소했어요!"
+Death-Message-Coords: "&6당신의 사망 위치는: &c%coords%&6이에요!"
+Time-Left: "&6당신은 순간이동 요청을 수락 또는 거절할 시간이 &c%seconds%&6초 남았어요"
+Damaged-Cancel-Message: "&6당신은 피해를 입었고 당신의 순간이동 요청은 삭제되었어요!"
+Different-Gamemode: "&6당신은 &c관전자&6모드에 있어서 순간이동 명령어를 사용할 수 없어요!"
+World-Doesnt-Exists-Or-Unloaded: "&6당신이 순간이동하려던 월드는 로드되지 않았거나 존재하지 않아요!"
+Enabled-TpAuto: "&6지금부터 당신은 &c자동적으로&6모든 /tpa 요청을 &c수락&6하게 됩니다!"
+Disabled-TpAuto: "&6지금부터 당신은 &c수동적으로&6모든 /tpa 요청을 &c수락&6하게 됩니다!"
+Player-Has-Ignored-You: "&6그 플레이어가 당신의 순간이동 요청을 &c무시&6했습니다!"
+## BUTTONS
+#Here you can find the colors https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/ChatColor.html
+
+# PARTICLES AND SOUNDS
+# Here you can change the sound volume or the pitch. These are the recommended values
+# Select the name for the sound from here: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+Sound-Name: "ENTITY_EXPERIENCE_ORB_PICKUP"
+sound-volume: 3.0
+sound-pitch: 0.533
+# Select the name for the particle from here: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+Particle-Name: "EXPLOSION_NORMAL"
+
+#Accept Button Properties
+Accept-Button: "수락"
+Accept-Button-Color: "RED"
+Accept-Button-Set-Bold: true
+Accept-Button-Description: "&6여기를 눌러 순간이동 요청을 &c수락&6하세요!"
+
+#Middle Button Properties
+Middle-Button: " | "
+Middle-Button-Color: "GRAY"
+Middle-Button-Set-Bold: true
+Middle-Button-Description: "&7 <- 둘 중 선택하세요 -> "
+
+#Deny Button Properties
+Deny-Button: "거절"
+Deny-Button-Color: "RED"
+Deny-Button-Set-Bold: true
+Deny-Button-Description: "&6여기를 눌러 순간이동 요청을 &c거절&6하세요!"
+
+# If you want to disable simpletpa for some worlds, then you can add them by adding - 'NameOfTheWorld'
+#Disabled Worlds:
+disabled-worlds:
+  - 'disabledworld'
+
+# If you set anything to true, you will disable it.
+# B A C K    S E T T I N G S
+
+#If you want to disable the back command, then set this to true
+disable-back-command: false
+
+# If you want to disable the death coords message, then set this to true
+disable-coords-message: false
+
+# If you want to disable saving the death location, then set this to true
+disable-back-on-death: false
+
+# If you want to disable saving the TP Locations such as TPA, TPAHERE, then set this to true
+disable-back-on-tp: false
+
+#Booleans
+#  If you want to disable checking for gamemode if equals to spectator, then set this to true
+disable-gamemode-check: false
+#  If you want to disable saving the accept or deny buttons, then set this to true
+disable-accept-deny-buttons: false
+#  If you want to disable saving the particles, then set this to true
+disable-particles: false
+#  If you want to disable saving the move system, then set this to true
+disable-move-system: false
+# If you want to disable sounds from the plugin, then set this to true
+disable-sound: false
+
+# If you want to disable interdimensional travel(only allowed to use the plugin in the same world with other player), then set this to true
+disable-interdimensional-travel: false
+# If you want to disable the invincibility after teleporting, then set this to true
+disable-invincibility: false
+# If you want to disable logging /back locations from quitting the server, then set this to true
+disable-back-on-quit: false
+
+# Everything works with SECONDS
+#Integers
+invincibility-seconds: 5
+#This will keep the teleport request alive for X seconds
+keep-alive: 60
+#This will delay the teleportation for X seconds
+delay-back-command: 5
+delay-teleportation: 5
+#Cooldowns
+back-cooldown: 10
+tpa-cooldown: 10
+tpahere-cooldown: 10
+tpahereall-cooldown: 10
+#To set a custom cooldown, you need to add a permission : simpletpa.cooldown.Y.X where Y is the command and  X are the seconds.
+#The options for commands are: tpa | tpahere | back | tpahereall
+#Example: simpletpa.cooldown.tpa.300 | simpletpa.cooldown.tpahere.300 | simpletpa.cooldown.tpahereall.300 | simpletpa.cooldown.back.300
+#This will set the cooldown for tpa/ tpahere/ tpahereall / back to 300 seconds
+
+
+
